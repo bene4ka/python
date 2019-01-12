@@ -14,7 +14,7 @@ except FileExistsError:
 logger = logging.getLogger('app.main')
 
 # Задаем требуемое форматирование
-formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s ")
+formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(module)s - %(message)s ")
 
 # Пробуем писать лог, ротирование каждую минуту (для теста), используем заданный формат лога.
 # Если сущуествует каталог с именем server.log, то выдаем в консоль ошибку о невозможности создать файл.

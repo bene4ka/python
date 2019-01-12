@@ -58,6 +58,8 @@ def sock_conn(args):
         s.connect((args[1], args[0]))
     except ConnectionRefusedError:
         logger.error('Не удалось соединиться с сервером! Правильный ли ip и порт задан?')
+        print('Не удалось соединиться с сервером! Правильный ли ip и порт задан?')
+        sys.exit()
     logger.info('Соединение прошло успешно!')
     return s
 
